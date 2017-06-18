@@ -13,8 +13,12 @@ def connect(ssid,passw):
 			pass
 		led.off() # turn led on when it is connected to the network
 	
-def setupAP(ssid,passw,channel):
+def setupAP(turnOn,ssid,passw,channel):
 	espAP = network.WLAN(network.AP_IF)
-	espAP.config(essid = ssid, password = passw, channel = channel)
-	print("Access point name:",ssid," ,channel:",channel)
+	if turnOn == True:
+		espAP.active(True)
+		espAP.config(essid = ssid, password = passw, channel = channel)
+		print("Access point name:",ssid," ,channel:",channel)
+	else:
+		espAP.active(False)
 
