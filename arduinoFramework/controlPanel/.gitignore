@@ -1,0 +1,6 @@
+.pioenvs
+.piolibdeps
+platformio.ini
+.travis.yml
+lib
+src
