@@ -3,6 +3,7 @@
 #include <WiFiClient.h>
 #include <ESP8266WiFiMulti.h>
 #include "index.h"
+#include "ledPanel.h"
 
 // network
 const char* ssid = "";
@@ -26,9 +27,9 @@ void handleIndex(){
 	server.send(200,"text/html",HTML_INDEX);
 }
 void handleLogin(){
-	// will fix later
+	// if credentails match go to led(s) page 
 	if(server.arg("username") == "user1" && server.arg("password")=="test"){
-		server.send(200,"text/html","<h1>Success</h1>");
+		server.send(200,"text/html",HTML_ledsPanel);
 	}
 }
 
