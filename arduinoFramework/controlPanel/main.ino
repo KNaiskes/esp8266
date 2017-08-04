@@ -13,6 +13,10 @@ const char* setHostname = "LED controller";
 
 const int port = 80;
 
+//login page credentials
+const char* username = "";
+const char* password = "";
+
 
 // app
 const char* appName = "Led controller";
@@ -25,7 +29,7 @@ void handleIndex(){
 }
 void handleLogin(){
 	// if credentails match go to led(s) page 
-	if(server.arg("username") == "user1" && server.arg("password")=="test"){
+	if(server.arg("username") == username && server.arg("password")== password){
 		server.send(200,"text/html",HTML_ledsPanel);
 	}
 }
