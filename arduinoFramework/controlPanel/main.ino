@@ -15,8 +15,8 @@ const int port = 80;
 
 
 // app
-const char* appName = "Ask4it";
-const char* appPasw = "lolhuman25";
+const char* appName = "Led controller";
+const char* appPasw = "funnyPass";
 
 ESP8266WebServer server(port);
 
