@@ -1,6 +1,8 @@
 const char HTML_INDEX[] =
+"<!DOCTYPE html>"
 "<html>"
 "<head>"
+"<meta name=\"viewport\" content=\"width=device-width, inital-scale=1.0\">"
 "<title>Login</title>"
 "</head>"
 "<body>"

@@ -1,13 +1,12 @@
-// page to control led(s)
-// can easily change to control a relay
-
 const char HTML_ledsPanel[] =
+"<!DOCTYPE html>"
 "<html>"
 "<head>"
+"<meta name=\"viewport\" content=\"width=device-width, inital-scale=1.0\">"
 "<title>Control leds</title>"
 "</head>"
-"<h1>Light up</h1>"
 "<form action=\"/status\"method=\"POST\">"
+"<h4>On-board led</h4>"
 "<input type=\"submit\" value=\"Toggle\">"
 "</form>"
 "</body>"
