@@ -2,8 +2,8 @@
 #include <ESP8266WebServer.h>
 #include <WiFiClient.h>
 #include "index.h"
-#include "ledPanel.h"
-#include "led.h"
+#include "relayPanel.h"
+#include "backPage.h"
 
 
 const int channel = 5;
