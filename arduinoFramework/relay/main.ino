@@ -30,7 +30,7 @@ void handleIndex(){
 	server.send(200,"text/html",HTML_INDEX);
 }
 void handleLogin(){
-	// if credentails match go to led(s) page 
+	// if credentails match go to relay status page 
 	if(server.arg("username") == username && server.arg("password")== password){
 		server.send(200,"text/html",HTML_ledsPanel);
 	}
@@ -50,6 +50,7 @@ void setup(){
 	server.on("/dashboard",HTTP_POST,handleLogin);
 	server.on("/status",HTTP_POST, handleLed);
 	server.begin();
+	digitalWrite(channel, HIGH);	
 }
 void loop(){
 	server.handleClient();
